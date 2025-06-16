@@ -16,6 +16,7 @@ public class UserResponseDTO {
     public Long getId() {
         return this.id;
     }
+    public UserResponseDTO(){}
     public UserResponseDTO(Long id, String username) {
         this.id = id;
         this.username = username;
