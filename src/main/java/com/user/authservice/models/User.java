@@ -18,6 +18,10 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    private String role;
+
+    private String token;
+
     public String getUsername() {
         return this.username;
     }
@@ -33,6 +37,20 @@ public class User {
    }
    public void setUsername(String username) {
         this.username = username;
+   }
+   public void setRole(String role) {
+        this.role = role;
+   }
+
+   public String getRole() {
+        return this.role;
+   }
+
+   public String getToken() {
+        return this.token;
+   }
+   public void setToken(String token) {
+        this.token = token;
    }
 
 }

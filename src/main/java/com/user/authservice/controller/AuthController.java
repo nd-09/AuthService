@@ -30,20 +30,20 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<LoginResponseDTO> login(@RequestBody LoginRequestDTO request) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
-        );
-        String token= jwtService.generateToken(request.getUsername());
-        return ResponseEntity.ok(new LoginResponseDTO(token));
+    public ResponseEntity<UserResponseDTO> login(@RequestBody LoginRequestDTO request) {
+        UserResponseDTO response = authService.login(request);
+        return ResponseEntity.ok(response);
     }
 
 
     @PostMapping("/register")
     public ResponseEntity<UserResponseDTO> register(@RequestBody RegisterUserDTO request) {
         UserResponseDTO response = authService.register(request);
+        System.out.println("response username: "+response.getUsername());
+        System.out.println("response token: "+response.getToken());
         return ResponseEntity.ok(response);
     }
+
 
     @GetMapping("/users")
     public ResponseEntity<List<UserResponseDTO>> getUsers() {

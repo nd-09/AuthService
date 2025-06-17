@@ -1,11 +1,8 @@
 package com.user.authservice.dtos;
 
-import lombok.Data;
-
-@Data
 public class UserResponseDTO {
-    private Long id;
     private String username;
+    private String token;
 
     public String getUsername() {
         return this.username;
@@ -13,12 +10,16 @@ public class UserResponseDTO {
     public void setUsername(String username) {
         this.username = username;
     }
-    public Long getId() {
-        return this.id;
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+    public String getToken() {
+        return this.token;
     }
     public UserResponseDTO(){}
-    public UserResponseDTO(Long id, String username) {
-        this.id = id;
+    public UserResponseDTO( String username,String token) {
         this.username = username;
+        this.token = token;
     }
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 public class RegisterUserDTO {
     private String username;
     private String password;
+    private String role;
 
     public String getUsername() {
      return this.username;
@@ -19,5 +20,11 @@ public class RegisterUserDTO {
     }
     public void setUsername(String username) {
         this.username = username;
+    }
+    public String getRole() {
+        return this.role;
+    }
+    public void setRole(String role) {
+        this.role = role;
     }
 }
