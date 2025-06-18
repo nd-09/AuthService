@@ -4,8 +4,6 @@ import com.user.authservice.models.User;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
@@ -24,7 +22,6 @@ public class JwtService {
     }
 
     public String generateToken(User user) {
-        System.out.println("Generating token? for "+user.getUsername());
         userDetailService.loadUserByUsername(user.getUsername());
         return Jwts.builder()
                 .setSubject(user.getUsername())
