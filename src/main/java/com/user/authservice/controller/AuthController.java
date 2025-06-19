@@ -30,8 +30,6 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<UserResponseDTO> register(@RequestBody RegisterUserDTO request) {
         UserResponseDTO response = authService.register(request);
-        System.out.println("response username: "+response.getUsername());
-        System.out.println("response token: "+response.getToken());
         return ResponseEntity.ok(response);
     }
 
