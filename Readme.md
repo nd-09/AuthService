@@ -143,5 +143,3 @@ cd auth-service
 Created with ❤️ by Navdeep Chovatiya.
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/navdeep-chovatiya-73349222a)
 
-)
-
