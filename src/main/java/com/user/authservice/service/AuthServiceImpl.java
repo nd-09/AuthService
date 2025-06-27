@@ -44,6 +44,7 @@ public class AuthServiceImpl implements IAuthService {
         String token = jwtService.generateToken(user);
         UserResponseDTO userResponseDTO = new UserResponseDTO();
         userResponseDTO.setToken(token);
+        userResponseDTO.setRole(user.getRole());
         userResponseDTO.setUsername(user.getUsername());
         return userResponseDTO;
     }

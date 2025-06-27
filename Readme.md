@@ -82,6 +82,7 @@ RESPONSE:
 ```json
 {
   "username": "user",
+  "role": "ADMIN",
   "token": "eyJhbGciOiJIUzI1NiIsInR..."
 }
 ```
